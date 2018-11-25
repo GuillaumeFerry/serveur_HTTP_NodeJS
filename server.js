@@ -36,7 +36,7 @@ app.get('/about', (request, response) => {
 
 // Rendu de la page about.html avec chemin express
 // app.get('/about', (request, response) => {
-//   response.sendFile(path.join(__dirname+'/about.html'));
+//   response.status(200).sendFile(path.join(__dirname+'/about.html'));
 // });
 
 

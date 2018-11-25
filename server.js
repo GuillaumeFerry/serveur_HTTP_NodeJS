@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 // Module pour lire les pages HTML
-const fs = require('fs'); 
+const fs = require('fs');
+// Module pour lire les pages HTML avec express
+const path = require("path");
 
 // Définition de l'emplacement des pages .PUG
 app.set('views', './views')
@@ -31,6 +33,11 @@ app.get('/about', (request, response) => {
     response.end();
   });
 });
+
+// Rendu de la page about.html avec chemin express
+// app.get('/about', (request, response) => {
+//   response.sendFile(path.join(__dirname+'/about.html'));
+// });
 
 
 app.listen(port, (err) => {
